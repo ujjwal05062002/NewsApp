@@ -5,7 +5,14 @@ export default class NewsItem extends Component {
         return (
             <div className='col-xl-2 col-lg3 col-md-4 cold-sm-6 col-12'>
                 <div className="card">
-                    <img src={this.props.pic?this.props.pic:"/images/noImageFound.jpg"} height="160px"className="card-img-top" alt="..." />
+                    <img
+                        src={this.props.pic || "/images/noImageFound.jpg"}
+                        height="160px"
+                        className="card-img-top"
+                        alt="..."
+                        style={{ display: 'block', width: '100%' }}
+                    />
+
                     <div className="card-body">
                         <h5 className="card-title">{this.props.title}</h5>
                         <div className='d-flex justify-content-between source'>
